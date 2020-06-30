@@ -15,14 +15,13 @@ class App extends Component {
         <p>
         Hello Chris, on a la class :) : code source : <code>src/App.js</code> (chg,save &amp; reload)
         </p>
-        <button onClick={()=>
-          this.setState({string:"Well clicked bro :)))))"})}>
+        <button onClick={()=> this.setState({string:"Clicked !"})}>
           Saying : {this.state.string}
         </button>   
         <a
           className="App-link"
           href="https://reactjs.org"
-          target="_blank"
+          // target="_blank"
           rel="noopener noreferrer"
         >
           Learn React
