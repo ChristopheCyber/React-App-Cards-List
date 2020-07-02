@@ -1,33 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
+class App extends React.Component {
+  com
   constructor(){
     super();
-    this.state={string:"Hello Poto !"}
+    this.state={//Array cards
+      cards:[
+        {
+          name:"Egypt Giza Pyramid Cheops", id:"card1"
+        },
+        {
+          name:"Egypt Giza Pyramid Chephren", id:"card2"
+        },
+        {
+          name:"Egypt Giza Pyramid Mykerinos", id:"card3"
+        },        
+        {
+          name:"Egypt Giza Sphinx", id:"card4"
+        }
+      ]
+    }
   }
   render() {
     return (
       <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        Hello Chris, on a la class :) : code source : <code>src/App.js</code> (chg,save &amp; reload)
-        </p>
-        <button onClick={()=> this.setState({string:"Clicked !"})}>
-          Saying : {this.state.string}
-        </button>   
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          // target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        {
+          this.state.cards.map( cardElt => <h1 key={cardElt.id}> {cardElt.name} </h1> )
+        }
+      </div>
     )
   }
 }
