@@ -3,8 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
-  com
-  constructor(){
+    constructor(){
     super();
     this.state={//Array cards
       cards:[
@@ -22,6 +21,11 @@ class App extends React.Component {
         }
       ]
     }
+  }
+  componentDidMount(){
+    fetch("https://jsonplaceholder.typicode.com/users")
+    .then ( resp1 => resp1.json() )
+    .then ( users1 => this.setState( {cards : users1} ) )
   }
   render() {
     return (
