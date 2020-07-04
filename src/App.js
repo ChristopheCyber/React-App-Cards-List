@@ -21,11 +21,11 @@ class App extends React.Component {
         <CardList name="Name of Component CardList">
           {/* children of CardList component */}
           <h2>CardList children here :)</h2>
+          {
+            this.state.cards.map( cardElt => 
+              <h1 key={cardElt.id}> {cardElt.name} </h1> )
+          }
         </CardList>
-        {
-          this.state.cards.map( cardElt => 
-            <h1 key={cardElt.id}> {cardElt.name} </h1> )
-        }
       </div>
     )
   }
