@@ -20,7 +20,7 @@ class App extends React.Component {
       <div className="App">
         <CardList name="Name of Component CardList">
           {/* children of CardList component */}
-          <h2>children here</h2>
+          <h2>CardList children here :)</h2>
         </CardList>
         {
           this.state.cards.map( cardElt => 
