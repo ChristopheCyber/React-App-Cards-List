@@ -1,25 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { CardList } from './components/card-list/card-list.component';
+
 
 class App extends React.Component {
     constructor(){
     super();
     this.state={//Array cards
-      cards:[
-        {
-          name:"Egypt Giza Pyramid Cheops", id:"card1"
-        },
-        {
-          name:"Egypt Giza Pyramid Chephren", id:"card2"
-        },
-        {
-          name:"Egypt Giza Pyramid Mykerinos", id:"card3"
-        },        
-        {
-          name:"Egypt Giza Sphinx", id:"card4"
-        }
-      ]
+      cards:[]
     }
   }
   componentDidMount(){
@@ -30,12 +18,16 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <CardList name="Name of Component CardList">
+          {/* children of CardList component */}
+          <h2>children here</h2>
+        </CardList>
         {
-          this.state.cards.map( cardElt => <h1 key={cardElt.id}> {cardElt.name} </h1> )
+          this.state.cards.map( cardElt => 
+            <h1 key={cardElt.id}> {cardElt.name} </h1> )
         }
       </div>
     )
   }
 }
-
 export default App;
