@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { CardList } from './components/card-list/card-list.component';
+import { CardList } from './components/card-list/card-list.component.jsx';
 
 
 class App extends React.Component {
@@ -13,7 +13,7 @@ class App extends React.Component {
   componentDidMount(){
     fetch("https://jsonplaceholder.typicode.com/users")
     .then ( resp1 => resp1.json() )
-    .then ( users1 => this.setState( {cards : users1} ) )
+    .then ( users => this.setState( {cards : users} ) )
   }
   render() {
     return (
