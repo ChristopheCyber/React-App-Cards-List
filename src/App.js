@@ -18,14 +18,15 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <CardList name="Name of Component CardList">
-          {/* children of CardList component */}
-          <h2>CardList children here :)</h2>
+        <CardList cardsProp1={this.state.cards}>
+          {/* children of CardList component 
+          <h2>CardList children here </h2>
           {
             this.state.cards.map( cardElt => 
               <h1 key={cardElt.id}> {cardElt.name} </h1> )
           }
-        </CardList>
+          */}
+        </CardList> 
       </div>
     )
   }
