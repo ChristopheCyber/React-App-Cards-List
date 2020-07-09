@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import { CardList } from './components/card-list/card-list.component.jsx';
-//import jsonData from '../public/data/json-data.json';
 
 class App extends React.Component {
     constructor(){

@@ -11,4 +11,4 @@ export const CardList = (prop1) => (
              ) }
 
         </div>
-)
+);

@@ -17,8 +17,9 @@
 }
 
 .card-container img {
-  height: 220px;
-  width: 200px;
+  height: 180px;
+  width: 160px;
+  margin : auto;
 }
 
 .card-container img:hover {
