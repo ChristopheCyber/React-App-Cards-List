@@ -30,9 +30,9 @@ class App extends React.Component {
         <label>Search cards: </label>
         <input type="search" placeholder="Type text for Searching" 
           name="search1" onChange={event1 => 
-              this.setState ({searchTxt1:event1.target.value},
-                ()=>console.log(this.state))
-          }/>
+                this.setState ({searchTxt1:event1.target.value})
+              }
+            />
         <CardList cardsProp1={this.state.cards} />
           {/*1 children of CardList component 
           <h2>CardList children here </h2>
