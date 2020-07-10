@@ -6,7 +6,8 @@ class App extends React.Component {
     constructor(){
     super();
     this.state={//Array cards
-      cards:[]
+      cards:[],
+      searchTxt1: ''
     }
   }
 
@@ -26,15 +27,21 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <CardList cardsProp1={this.state.cards}>
+        <label>Search cards: </label>
+        <input type="search" placeholder="Type text for Searching" 
+          name="search1" onChange={event1 => 
+              this.setState ({searchTxt1:event1.target.value},
+                ()=>console.log(this.state))
+          }/>
+        <CardList cardsProp1={this.state.cards} />
           {/*1 children of CardList component 
           <h2>CardList children here </h2>
           {
             this.state.cards.map( cardElt => 
               <h1 key={cardElt.id}> {cardElt.name} </h1> )
           }
-          */}
         </CardList> 
+          */}
       </div>
     )
   }
