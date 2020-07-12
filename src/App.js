@@ -26,18 +26,13 @@ class App extends React.Component {
 
   render() {
       /*destructuring object state, doing same as:*/
-     /* const constCards = this.state.cards; 
+      /* const constCards = this.state.cards; 
       const constSearchTxt1 = this.state.searchTxt1; */
-      console.log("this.state=<",this.state,">");
       const { cards:constCards, searchTxt1:constSearchTxt1 } = this.state;
-      /*
-      const { monsters, searchField } = this.state;
-      */
-      console.log("const constCards=<",constCards,">"); 
-      console.log("const constSearchTxt1=<",constSearchTxt1,">");  
+ 
       const filteredCards =  constCards.filter(eltTab => 
           eltTab.name.toLowerCase().includes(constSearchTxt1.toLowerCase()) );  
-      console.log("filteredCards=",filteredCards);
+      /*console.log("filteredCards=",filteredCards);*/
       return (
       <div className="App">
         <label><i>Search cards: </i></label>
