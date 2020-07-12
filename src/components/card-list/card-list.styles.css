@@ -1,11 +1,11 @@
 .card-list-divStyle {
-  border: 5px solid pink;
+  /*border: 5px solid pink;
   background-color: lightgreen;
-  /*width: 85vw;*/
-  width: auto;
+  /*width: auto;*/
+  width: 85vw;
   margin: 0 auto;
-  margin-left: 10px;
-  /*margin-right: 0px;*/
+  /*margin-left: 10px;
+  margin-right: 0px;*/
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;

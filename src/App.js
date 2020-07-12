@@ -5,10 +5,10 @@ import { CardList } from './components/card-list/card-list.component.jsx';
 class App extends React.Component {
     constructor(){
     super();
-    this.state={//Array cards
-      cards:[],
+    this.state = {
+      cards: [],
       searchTxt1: ''
-    }
+    };
   }
 
  componentDidMount(){
@@ -25,15 +25,29 @@ class App extends React.Component {
   */
 
   render() {
-    return (
+      /*destructuring object state, doing same as:*/
+     /* const constCards = this.state.cards; 
+      const constSearchTxt1 = this.state.searchTxt1; */
+      console.log("this.state=<",this.state,">");
+      const { cards:constCards, searchTxt1:constSearchTxt1 } = this.state;
+      /*
+      const { monsters, searchField } = this.state;
+      */
+      console.log("const constCards=<",constCards,">"); 
+      console.log("const constSearchTxt1=<",constSearchTxt1,">");  
+      const filteredCards =  constCards.filter(eltTab => 
+          eltTab.name.toLowerCase().includes(constSearchTxt1.toLowerCase()) );  
+      console.log("filteredCards=",filteredCards);
+      return (
       <div className="App">
-        <label>Search cards: </label>
+        <label><i>Search cards: </i></label>
         <input type="search" placeholder="Type text for Searching" 
           name="search1" onChange={event1 => 
                 this.setState ({searchTxt1:event1.target.value})
               }
             />
-        <CardList cardsProp1={this.state.cards} />
+        {/*<CardList cardsProp1={this.state.cards} />*/}
+        <CardList cardsProp1={filteredCards} />
           {/*1 children of CardList component 
           <h2>CardList children here </h2>
           {
