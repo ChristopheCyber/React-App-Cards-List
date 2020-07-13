@@ -35,7 +35,7 @@ class App extends React.Component {
       /*console.log("filteredCards=",filteredCards);*/
       return (
       <div className="App">
-        <label><i>Search cards: </i></label>
+        <label><i className="bigLow">Search in cards titles -> </i></label>
         <input type="search" placeholder="Type text for Searching" 
           name="search1" onChange={event1 => 
                 this.setState ({searchTxt1:event1.target.value})

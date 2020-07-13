@@ -4,13 +4,13 @@ import './card.styles.css';
 
 export const Card = (prop1) => (
     <div className='card-container'> 
-        <h3> {prop1.cardProp2.name} </h3>
+        <strong> {prop1.cardProp2.name} </strong>
         {/* ---my pics--- */}
         <img src={ require(`./img/img${prop1.cardProp2.id}.jpg`)} 
             alt={`Pic ${prop1.cardProp2.id}`} 
             title={`Image ${prop1.cardProp2.id}`}
         />
-        <h4> email: </h4>
+        <strong> email: </strong>
         <span>{prop1.cardProp2.email}</span>
         {/* 
         {/*---origin pics---
