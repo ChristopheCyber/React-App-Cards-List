@@ -26,13 +26,13 @@ class App extends React.Component {
 
   render() {
       /*destructuring object state, doing same as:*/
-      /* const constCards = this.state.cards; 
+      /* const tabCards = this.state.cards; 
       const constSearchTxt1 = this.state.searchTxt1; */
-      const { cards:constCards, searchTxt1:constSearchTxt1 } = this.state;
- 
-      const filteredCards =  constCards.filter(eltTab => 
+      const { cards:tabCards, searchTxt1:constSearchTxt1 } = this.state;
+      const filteredCards =  tabCards.filter(eltTab => 
           eltTab.name.toLowerCase().includes(constSearchTxt1.toLowerCase()) );  
-      /*console.log("filteredCards=",filteredCards);*/
+      const nbrCards =  filteredCards.length;
+
       return (
       <div className="App">
         <label><i className="bigLow">Search in cards titles -> </i></label>
@@ -41,6 +41,8 @@ class App extends React.Component {
                 this.setState ({searchTxt1:event1.target.value})
               }
             />
+        <label><i className="bigLow">
+        &nbsp; ( &lt; {nbrCards} &gt; cards in list now )</i></label>
         {/*<CardList cardsProp1={this.state.cards} />*/}
         <CardList cardsProp1={filteredCards} />
           {/*1 children of CardList component 
