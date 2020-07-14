@@ -45,7 +45,8 @@
 
 .card-container img {
   height: 246px;
-  width: 226px;
+  /*width: 226px;*/
+  width: 98%;
   margin : auto;
 }
 

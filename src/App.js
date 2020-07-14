@@ -30,19 +30,28 @@ class App extends React.Component {
       const constSearchTxt1 = this.state.searchTxt1; */
       const { cards:tabCards, searchTxt1:constSearchTxt1 } = this.state;
       const filteredCards =  tabCards.filter(eltTab => 
-          eltTab.name.toLowerCase().includes(constSearchTxt1.toLowerCase()) );  
-      const nbrCards =  filteredCards.length;
-
+          eltTab.name.toLowerCase().includes(constSearchTxt1.toLowerCase()) ); 
+      var nbrCards; 
+      if(filteredCards.length>1){
+        nbrCards =  " ( "+filteredCards.length+" cards in list now ) ";
+      }
+      else {
+        nbrCards =  " ( "+filteredCards.length+" card in list now ) ";
+      }
+      
       return (
       <div className="App">
-        <label><i className="bigLow">Search in cards titles -> </i></label>
+        <label><i className="bigLow">Search in cards titles -&gt; </i></label>
         <input type="search" placeholder="Type text for Searching" 
           name="search1" onChange={event1 => 
                 this.setState ({searchTxt1:event1.target.value})
               }
             />
-        <label><i className="bigLow">
-        &nbsp; ( &lt; {nbrCards} &gt; cards in list now )</i></label>
+        <label>
+          <i className="bigLow">
+            &nbsp; {nbrCards}
+          </i>
+        </label>
         {/*<CardList cardsProp1={this.state.cards} />*/}
         <CardList cardsProp1={filteredCards} />
           {/*1 children of CardList component 

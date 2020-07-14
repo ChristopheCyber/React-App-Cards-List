@@ -3,10 +3,13 @@
   background-color: lightgreen;
   /*width: auto;*/
   width: 85vw;
-  margin: 0 auto;
+  margin: auto;
+  justify-content: center;
   /*margin-left: 10px;
   margin-right: 0px;*/
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-column-start: 1;
   grid-gap: 20px;
 }
