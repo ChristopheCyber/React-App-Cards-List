@@ -11,7 +11,10 @@
   text-align: center;
   justify-content: center;
 }
-
+::placeholder, input{
+  color: #5ef01a;
+  background: rgb(14, 106, 148);
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

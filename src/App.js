@@ -38,14 +38,23 @@ class App extends React.Component {
       else {
         nbrCards =  " ( "+filteredCards.length+" card in list now ) ";
       }
-      
+      function fctEv(event1){
+        console.log("fctEv starts with:",event1);
+      };
+      fctEv();
       return (
       <div className="App">
         <label><i className="bigLow">Search in cards titles -&gt; </i></label>
         <input type="search" placeholder="Type text for Searching" 
-          name="search1" onChange={event1 => 
-                this.setState ({searchTxt1:event1.target.value})
-              }
+          name="search1" onChange={
+           /* (evt) =>{
+            this.setState ( {searchTxt1:evt.target.value} )*/
+            (evt) =>{
+              console.log("Cool");
+              fctEv(2);
+              this.setState ( {searchTxt1:evt.target.value} )
+            }
+          }
             />
         <label>
           <i className="bigLow">
