@@ -62,14 +62,18 @@ class App extends React.Component {
                     document.querySelector('.img-class')); 
 
       }
-      /*fctClassAnim();*/
-      //function count filtered cards 
+      //counting filtered cards + according text
       var nbrCards; 
       if(filteredCards.length>1){
         nbrCards =  " ( "+filteredCards.length+" cards in list now ) ";
       }
       else {
         nbrCards =  " ( "+filteredCards.length+" card in list now ) ";
+      }
+      //coloring text number filtered cards 
+      var filterBigLowNumber =  "bigLow-search"; 
+      if( filteredCards.length < tabCards.length ){
+        filterBigLowNumber =  "bigLow-search-filtered";
       }
       /*
       function fctEv(event1){
@@ -106,7 +110,7 @@ class App extends React.Component {
           }
             />
         <label>
-          <i className="bigLow">
+          <i className={"bigLow " + filterBigLowNumber}>
             &nbsp; {nbrCards}
           </i>
         </label>

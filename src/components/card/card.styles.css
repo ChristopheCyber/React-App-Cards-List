@@ -4,8 +4,13 @@
   color: #0ccac4;*/
   display: flex;
   flex-direction: column;
-  background-color: #95dada;
-  border: 2px solid rgba(25, 219, 35, 0.582);
+  /*background-color: #95dada;*/
+  background: linear-gradient(
+    to bottom left,
+    rgb(7, 58, 82) 0%,
+    rgb(126, 206, 226) 100%
+  );
+  border: 1.1px solid rgba(25, 219, 35, 0.582);
   border-radius: 5px;
   padding: 10px;
   box-shadow: 4px 4px 4px rgba(47, 221, 221, 0.61);
@@ -17,14 +22,30 @@
   transition: transform 0.35s ease-out;
 }
 
+.card-list-filtered-card {
+  background: linear-gradient(
+    to bottom left,
+    rgb(22, 82, 7) 0%,
+    rgb(96, 196, 30) 100%
+  );
+}
+
 .card-container strong:first-of-type {
   font-family: 'Bigelow Rules';
   font-size: 26px;
-  font-weight: bolder;
-  color:  rgb(5, 4, 5);  
-  text-shadow: 2px 2px 8px rgb(43, 228, 52);
+  font-weight: lighter;
+  color:  rgb(62, 216, 82);  
+  text-shadow: 3px 6px 8px rgb(13, 11, 119);
 
 }
+
+.card-list-filtered-card strong:first-of-type{
+  color:  rgb(120, 245, 37);  
+  text-shadow: 6px 6px 6px rgb(228, 43, 43);
+  font-weight: lighter;
+  transition: all 1s;
+}
+
 .card-container strong:nth-last-of-type(1) {
   font-family: 'Bigelow Rules';
   font-size: 20px;
@@ -38,6 +59,11 @@
   /*width: 226px;*/
   width: 98%;
   margin : auto;
+  background: linear-gradient(
+    to bottom left,
+    rgb(22, 82, 7) 0%,
+    rgb(96, 196, 30) 100%
+  );
 }
 
 .card-container img:hover {

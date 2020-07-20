@@ -3,7 +3,8 @@ import './card.styles.css';
 //import img01 from './img/img01.jpg' // relative path to image 
 
 export const Card = (prop1) => (
-    <div className='card-container'> 
+    <div className={ 'card-container ' + prop1.cardProp3 + '-card' }>
+    {/*<div className='card-container'> */}
         <strong> {prop1.cardProp2.name} </strong>
         { console.log('In Card ',prop1.cardProp2.id
                         ,'=>',prop1.cardProp2.name

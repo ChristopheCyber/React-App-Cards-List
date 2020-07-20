@@ -1,12 +1,17 @@
 .bigLow {
   font-family: 'Bigelow Rules';
   font-size: 30px;
-  text-shadow: 2px 2px 8px rgb(228, 43, 43);
+  text-shadow: 2px 8px 6px rgb(228, 43, 43);
   font-style: normal;
   /*text-decoration: underline;*/
   text-decoration-thickness: 2px;
-  color: #5ef01a;
+  color: #4bccdd;
 }
+.bigLow-search-filtered {
+  /*color: rgb(37, 245, 176);*/
+  color: rgb(120, 245, 37);
+}
+
 .App {
   text-align: center;
   justify-content: center;
@@ -14,11 +19,7 @@
 /*.App img {
   height: 100px;
 }*/
-.img-class-filtered img {
-    height: 100px;
-    /*width: 100px;*/
-    transform: scale(1.25);
-}
+
 /* Animation with JS */
 .container-grid-animate {
   /*grid-template-columns: 250px 250px 250px;
