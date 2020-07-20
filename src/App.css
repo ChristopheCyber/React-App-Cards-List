@@ -11,6 +11,30 @@
   text-align: center;
   justify-content: center;
 }
+/*.App img {
+  height: 100px;
+}*/
+.img-class-filtered img {
+    height: 100px;
+    /*width: 100px;*/
+    transform: scale(1.25);
+}
+/* Animation with JS */
+.container-grid-animate {
+  /*grid-template-columns: 250px 250px 250px;
+  grid-template-rows: 250px;*/
+  color:rgb(203, 206, 55) ;
+  text-shadow: 2px 2px 1px rgb(231, 57, 57);
+  /*display: grid;
+  /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+  /*grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 5px;
+  transition: all 3s;
+  img:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease-out;
+  }*/
+}
 ::placeholder, input{
   color: #5ef01a;
   background: rgb(14, 106, 148);

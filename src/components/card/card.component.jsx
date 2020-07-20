@@ -5,13 +5,19 @@ import './card.styles.css';
 export const Card = (prop1) => (
     <div className='card-container'> 
         <strong> {prop1.cardProp2.name} </strong>
+        { console.log('In Card ',prop1.cardProp2.id
+                        ,'=>',prop1.cardProp2.name
+             ,'prop1.cardProp3=>',prop1.cardProp3) }
         {/* ---my pics--- */}
         <img src={ require(`./img/img${prop1.cardProp2.id}.jpg`)} 
             alt={`Pic ${prop1.cardProp2.id}`} 
             title={`Image ${prop1.cardProp2.id}`}
-        />
+            /*className={`${prop1.cardProp3}`}*/
+        />  
         <strong> email: </strong>
         <span>{prop1.cardProp2.email}</span>
+        <strong> cardProp3: </strong>
+        <span>Pic size=&gt;{prop1.cardProp3}</span>
         {/* 
         {/*---origin pics---
         <img src={ require(`./img/img${prop1.cardProp2.id}.jpg`)} 

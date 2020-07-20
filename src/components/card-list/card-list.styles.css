@@ -14,3 +14,12 @@
   grid-gap: 20px;
   transition: all 3s;
 }
+.card-list-filtered {
+  grid-gap: 10px;
+  background: linear-gradient(
+    to bottom left,
+    rgb(7, 27, 82, 1) 0%,
+    rgb(0, 128, 128, 1) 100%
+  );
+  transition: all 3s;
+}

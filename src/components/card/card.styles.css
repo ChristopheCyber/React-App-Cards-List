@@ -34,16 +34,6 @@
 }
 
 .card-container img {
-  border: 2px solid rgba(43, 228, 52, 0.63);
-  border-radius: 10px;
-  box-shadow: blue;
-}
-
-.card-container:hover {
-  transform: scale(1.05);
-}
-
-.card-container img {
   height: 246px;
   /*width: 226px;*/
   width: 98%;

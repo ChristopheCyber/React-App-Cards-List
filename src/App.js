@@ -7,7 +7,8 @@ class App extends React.Component {
     super();
     this.state = {
       cards: [],
-      searchTxt1: ''
+      searchTxt1: '',
+      imgSize1: "img-class"
     };
   }
 
@@ -28,9 +29,41 @@ class App extends React.Component {
       /*destructuring object state, doing same as:*/
       /* const tabCards = this.state.cards; 
       const constSearchTxt1 = this.state.searchTxt1; */
-      const { cards:tabCards, searchTxt1:constSearchTxt1 } = this.state;
+      const { cards:tabCards, searchTxt1:constSearchTxt1, imgSize1:constImgSize1 } = this.state;
       const filteredCards =  tabCards.filter(eltTab => 
-          eltTab.name.toLowerCase().includes(constSearchTxt1.toLowerCase()) ); 
+          eltTab.name.toLowerCase().includes(constSearchTxt1.toLowerCase()) );
+      console.log('const filteredCards.length=',
+                     filteredCards.length); 
+      //               
+      //function anime filtered cards
+      var classAnim="img-class";
+      function fctClassAnim(eltSearch) {
+        console.log('in fctClassAnim()=> eltSearch=',eltSearch);
+        /*constSearchTxt1 = this.state.searchTxt1;*/
+        var filteredCards2 =  tabCards.filter(eltTab => 
+          eltTab.name.toLowerCase().includes(eltSearch.toLowerCase()) );
+          console.log('in fctClassAnim()=> filteredCards2.length=',
+          filteredCards2.length); 
+      /*document.querySelector('.img-class').classList.toggle('img-class-filtered');*/
+        if(filteredCards2.length < tabCards.length){
+          classAnim="card-list-filtered";
+        /*document.getElementsByTagName('img')[0].style.height='100px';
+            this.state.cards.map( cardElt => 
+              <h1 key={cardElt.id}> {cardElt.name} </h1> )
+          document.querySelectorAll('.img-class')[0].classList.toggle('img-class-filtered');
+        */
+        }
+        else{
+          classAnim="img-class";
+        };
+        console.log('in fctClassAnim()=> filteredCards2.length=',
+                    filteredCards2.length,'=> classAnim=',classAnim); 
+        console.log('document.querySelector(\'.img-class\')=',
+                    document.querySelector('.img-class')); 
+
+      }
+      /*fctClassAnim();*/
+      //function count filtered cards 
       var nbrCards; 
       if(filteredCards.length>1){
         nbrCards =  " ( "+filteredCards.length+" cards in list now ) ";
@@ -38,21 +71,37 @@ class App extends React.Component {
       else {
         nbrCards =  " ( "+filteredCards.length+" card in list now ) ";
       }
+      /*
       function fctEv(event1){
         console.log("fctEv starts with:",event1);
+        fctTestv();
+        document.querySelector('.js-grid').classList.toggle('container-grid-animate');
+        document.querySelector('.img-class').classList.toggle('card-list-filtered');
       };
-      fctEv();
+      */
       return (
-      <div className="App">
-        <label><i className="bigLow">Search in cards titles -&gt; </i></label>
+      <div className="App img-class">
+        <label><i className="bigLow js-grid">Search in cards titles -&gt; </i></label>
         <input type="search" placeholder="Type text for Searching" 
           name="search1" onChange={
            /* (evt) =>{
             this.setState ( {searchTxt1:evt.target.value} )*/
             (evt) =>{
-              console.log("Cool");
-              fctEv(2);
-              this.setState ( {searchTxt1:evt.target.value} )
+              console.log("Change Event !!!");
+              //fctClassAnim() placed in callback of setState( ,()=>... )
+              this.setState ( {searchTxt1:evt.target.value},
+                              ()=>{console.log("in Event deb searchTxt1=",this.state.searchTxt1,
+                                                " classAnim=",classAnim);
+                                  fctClassAnim(this.state.searchTxt1);
+                                  console.log("in Event fin1 classAnim=",classAnim,
+                                    '; this.state.imgSize1=',this.state.imgSize1
+                                    );                                  
+                                  this.setState ( {imgSize1:classAnim}, 
+                                    console.log("in Event fin2 classAnim= ",classAnim,
+                                      '; this.state.imgSize1= ',this.state.imgSize1,
+                                      '; constImgSize1= ',constImgSize1 )
+                                      );
+                                  }); 
             }
           }
             />
@@ -62,7 +111,7 @@ class App extends React.Component {
           </i>
         </label>
         {/*<CardList cardsProp1={this.state.cards} />*/}
-        <CardList cardsProp1={filteredCards} />
+        <CardList cardsProp1={filteredCards} cardsPropImg={constImgSize1}/>
           {/*1 children of CardList component 
           <h2>CardList children here </h2>
           {
