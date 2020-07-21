@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { CardList } from './components/card-list/card-list.component.jsx';
+import { SearchBox } from './components/search-box/search-box.component.jsx';
 
 class App extends React.Component {
     constructor(){
@@ -86,10 +87,10 @@ class App extends React.Component {
       return (
       <div className="App img-class">
         <label><i className="bigLow js-grid">Search in cards titles -&gt; </i></label>
-        <input type="search" placeholder="Type text for Searching" 
-          name="search1" onChange={
-           /* (evt) =>{
-            this.setState ( {searchTxt1:evt.target.value} )*/
+        <SearchBox
+          propPlaceHolder="Type text for Searching" 
+          handleChangeFct={  /* (evt) =>{
+                       this.setState ( {searchTxt1:evt.target.value} )*/
             (evt) =>{
               console.log("Change Event !!!");
               //fctClassAnim() placed in callback of setState( ,()=>... )
