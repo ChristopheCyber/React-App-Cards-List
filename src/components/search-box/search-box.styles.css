@@ -1,9 +1,13 @@
 .search-box {
-    -webkit-appearance: none;
+    /*-webkit-appearance: none;
     border: none;
-    outline: none;
-    padding: 10px;
     width: 150px;
-    line-height: 30px;
-    margin-bottom: 30px;
+    line-height: 30px;*/
+    padding: 1px;
+    outline: none;
+    margin-bottom: 10px;
+  }
+  ::placeholder, input{
+    color: #5ef01a;
+    background: rgb(14, 106, 148);
   }
