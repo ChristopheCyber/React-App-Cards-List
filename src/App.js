@@ -9,11 +9,10 @@ class App extends React.Component {
     this.state = {
       cards: [],
       searchTxt1: '',
-      imgSize1: "img-class",
-      isToggleOn: true
+      imgSize1: "img-class"
     };
-    // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
+    // binding is necessary to make `this` work in the fct1 called in callback method
+    //this.fct1 = this.fct1.bind(this);
   }
 
   componentDidMount() {
@@ -26,20 +25,8 @@ class App extends React.Component {
     fetch("https://jsonplaceholder.typicode.com/users")
     .then ( resp1 => resp1.json() )
     .then ( users1 => this.setState( {cards : users1} ) )
-  }
-  
- handleClick() {
-  this.setState(state1 => ({
-    isToggleOn: !state1.isToggleOn
-  }));
-}*/
-  handleClick() {
-    this.setState({
-      isToggleOn: !this.state.isToggleOn
-    });
-  }
-
-
+     }
+  */
   render() {
     /*destructuring object state, doing same as:*/
     /* const tabCards = this.state.cards; 
@@ -134,10 +121,6 @@ class App extends React.Component {
             &nbsp; {nbrCards}
           </i>
         </label>
-
-        <button onClick={this.handleClick}>
-          {this.state.isToggleOn ? 'ON' : 'OFF'}
-        </button>
 
         {/*<CardList cardsProp1={this.state.cards} />*/}
         <CardList cardsProp1={filteredCards} cardsPropImg={constImgSize1} />
