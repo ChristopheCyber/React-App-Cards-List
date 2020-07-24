@@ -8,7 +8,7 @@ export const SearchBox = ({ propPlaceHolder, handleChangeFct }) => (
     type='search'
     name="search1"
     //destructuring obj entered into 2 objs
-    placeHolder={propPlaceHolder}
+    placeholder={propPlaceHolder}
     onChange={handleChangeFct}
   />
 );
