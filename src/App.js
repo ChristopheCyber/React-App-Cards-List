@@ -39,8 +39,8 @@ class App extends React.Component {
             '; constImgSize1= ', constImgSize1)
         );
       });
-    //*** 
-    //***function fctClassAnim() anime filtered cards */
+    // 
+    // function fctClassAnim() anime filtered cards */
     var classAnim = "img-class";
     const tabCards = this.state.cards;
     const constImgSize1 = this.state.imgSize1;
@@ -67,22 +67,19 @@ class App extends React.Component {
         filteredCards2.length, '=> classAnim=', classAnim);
       console.log('document.querySelector(\'.img-class\')=',
         document.querySelector('.img-class'));
-
     }
     //
   }
   //*** Life Cycle method render() {}
   render() {
     /*destructuring object state, doing same as:*/
-    /* const tabCards = this.state.cards; 
-    const constSearchTxt1 = this.state.searchTxt1; */
+    /* const tabCards = this.state.cards; const constSearchTxt1 = this.state.searchTxt1; */
     const { cards: tabCards, searchTxt1: constSearchTxt1, imgSize1: constImgSize1 } = this.state;
     const filteredCards = tabCards.filter(eltTab =>
       eltTab.name.toLowerCase().includes(constSearchTxt1.toLowerCase()));
     console.log('const filteredCards.length=',
       filteredCards.length);
     //               
-
     //counting filtered cards + according text
     var nbrCards;
     if (filteredCards.length > 1) {
@@ -106,6 +103,7 @@ class App extends React.Component {
     */
     return (
       <div className="App img-class">
+        <h1> Cards Selection </h1>
         <label>
           <i className="bigLow js-grid">Search in cards titles -&gt;</i>
         </label>
@@ -116,7 +114,6 @@ class App extends React.Component {
         <label>
           <i className={"bigLow " + filterBigLowNumber}>&nbsp; {nbrCards}</i>
         </label>
-
         {/*<CardList cardsProp1={this.state.cards} />*/}
         <CardList cardsProp1={filteredCards} cardsPropImg={constImgSize1} />
         {/*1 children of CardList component 
