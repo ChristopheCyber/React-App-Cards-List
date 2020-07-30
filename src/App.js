@@ -103,7 +103,7 @@ class App extends React.Component {
     */
     return (
       <div className="App img-class">
-        <h1> Cards Selection </h1>
+        <h1> Cards Selections </h1>
         <label>
           <i className="bigLow js-grid">Search in cards titles -&gt;</i>
         </label>
