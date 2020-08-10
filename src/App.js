@@ -4,8 +4,8 @@ import { CardList } from './components/card-list/card-list.component.jsx';
 import { SearchBox } from './components/search-box/search-box.component.jsx';
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       cards: [],
       searchTxt1: '',
