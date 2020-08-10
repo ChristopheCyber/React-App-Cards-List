@@ -11,7 +11,7 @@ class App extends React.Component {
       searchTxt1: '',
       imgSize1: "img-class"
     };
-    // binding is necessary to make `this` work in a fct1 called as callback method from another method
+    //binding is necessary to make `this` work in a fct1 called as callback method from another method
     //this.fct1 = this.fct1.bind(this);
   }
   //*** Life Cycle method componentDidMount() {}
@@ -26,18 +26,16 @@ class App extends React.Component {
     // setState() 
     this.setState({ searchTxt1: evt.target.value },
       () => {
-        console.log("in Event deb searchTxt1=", this.state.searchTxt1,
-          " classAnim=", classAnim);
-        //   fctClassAnim() placed in callback of setState( ,()=>... )   
+        console.log("in Event deb searchTxt1=", this.state.searchTxt1," classAnim=", classAnim);
+
+        //  fctClassAnim() placed in callback of setState( ,()=>... )   
         fctClassAnim(this.state.searchTxt1);
-        console.log("in Event fin1 classAnim=", classAnim,
-          '; this.state.imgSize1=', this.state.imgSize1
-        );
-        this.setState({ imgSize1: classAnim },
-          console.log("in Event fin2 classAnim= ", classAnim,
-            '; this.state.imgSize1= ', this.state.imgSize1,
-            '; constImgSize1= ', constImgSize1)
-        );
+
+        console.log("in Event fin1 classAnim=", classAnim,'; this.state.imgSize1=', this.state.imgSize1);
+        //
+        this.setState( { imgSize1: classAnim },
+          console.log("in Event fin2 classAnim= ", classAnim,'; this.state.imgSize1= ', this.state.imgSize1,'; constImgSize1= ', constImgSize1)
+          );
       });
     // 
     // function fctClassAnim() anime filtered cards */
