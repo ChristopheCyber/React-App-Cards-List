@@ -9,7 +9,7 @@ class App extends React.Component {
     this.state = {
       cards: [],
       searchTxt1: '',
-      imgSize1: "img-class"
+      picContentType: "img-class"
     };
     //binding is necessary to make `this` work in a fct1 called as callback method from another method
     //this.fct1 = this.fct1.bind(this);
@@ -31,17 +31,17 @@ class App extends React.Component {
         //  fctClassAnim() placed in callback of setState( ,()=>... )   
         fctClassAnim(this.state.searchTxt1);
 
-        console.log("in Event fin1 classAnim=", classAnim,'; this.state.imgSize1=', this.state.imgSize1);
+        console.log("in Event fin1 classAnim=", classAnim,'; this.state.picContentType=', this.state.picContentType);
         //
-        this.setState( { imgSize1: classAnim },
-          console.log("in Event fin2 classAnim= ", classAnim,'; this.state.imgSize1= ', this.state.imgSize1,'; constImgSize1= ', constImgSize1)
+        this.setState( { picContentType: classAnim },
+          console.log("in Event fin2 classAnim= ", classAnim,'; this.state.picContentType= ', this.state.picContentType,'; constPicContentType= ', constPicContentType)
           );
       });
     // 
     // function fctClassAnim() anime filtered cards */
     var classAnim = "img-class";
     const tabCards = this.state.cards;
-    const constImgSize1 = this.state.imgSize1;
+    const constPicContentType = this.state.picContentType;
     function fctClassAnim(eltSearch) {
       console.log('in fctClassAnim()=> eltSearch=', eltSearch);
       /*constSearchTxt1 = this.state.searchTxt1;*/
@@ -72,7 +72,7 @@ class App extends React.Component {
   render() {
     /*destructuring object state, doing same as:*/
     /* const tabCards = this.state.cards; const constSearchTxt1 = this.state.searchTxt1; */
-    const { cards: tabCards, searchTxt1: constSearchTxt1, imgSize1: constImgSize1 } = this.state;
+    const { cards: tabCards, searchTxt1: constSearchTxt1, picContentType: constPicContentType } = this.state;
     const filteredCards = tabCards.filter(eltTab =>
       eltTab.name.toLowerCase().includes(constSearchTxt1.toLowerCase()));
     console.log('const filteredCards.length=',
@@ -113,7 +113,7 @@ class App extends React.Component {
           <i className={"bigLow " + filterBigLowNumber}>&nbsp; {nbrCards}</i>
         </label>
         {/*<CardList cardsProp1={this.state.cards} />*/}
-        <CardList cardsProp1={filteredCards} cardsPropImg={constImgSize1} />
+        <CardList cardsProp1={filteredCards} cardsPropImg={constPicContentType} />
         {/*1 children of CardList component 
           <h2>CardList children here </h2>
           {

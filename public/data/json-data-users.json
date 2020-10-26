@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "React framework, skill 1",
-    "username": "Bret",
+    "name": "React framework. ( card 1 )",
+    "cardname": "React",
     "email": "ChrisCyb01@bla.biz",
     "address": {
       "street": "Kulas Light",
@@ -15,7 +15,7 @@
       }
     },
     "phone": "1-770-736-8031 x56442",
-    "website": "hildegard.org",
+    "website": "https://reactjs.org/",
     "company": {
       "name": "Romaguera-Crona",
       "catchPhrase": "Multi-layered client-server neural-net",
@@ -24,8 +24,8 @@
   },
   {
     "id": 2,
-    "name": "Redux optimisation, skill 2",
-    "username": "Antonette",
+    "name": "Redux optimisation. ( card 2 )",
+    "cardname": "Redux",
     "email": "ChrisCyb02@bla.tv",
     "address": {
       "street": "Victor Plains",
@@ -38,7 +38,7 @@
       }
     },
     "phone": "010-692-6593 x09125",
-    "website": "anastasia.net",
+    "website": "https://www.npmjs.com/package/redux",
     "company": {
       "name": "Deckow-Crist",
       "catchPhrase": "Proactive didactic contingency",
@@ -47,8 +47,8 @@
   },
   {
     "id": 3,
-    "name": "Firebase authentication, skill 3",
-    "username": "Samantha",
+    "name": "Firebase authentication. ( card 3 )",
+    "cardname": "Firebase",
     "email": "ChrisCyb03@bla.net",
     "address": {
       "street": "Douglas Extension",
@@ -61,7 +61,7 @@
       }
     },
     "phone": "1-463-123-4447",
-    "website": "ramiro.info",
+    "website": "https://firebase.google.com/",
     "company": {
       "name": "Romaguera-Jacobson",
       "catchPhrase": "Face to face bifurcated interface",
@@ -70,8 +70,8 @@
   },
   {
     "id": 4,
-    "name": "Heroku cloud server, skill 4",
-    "username": "Karianne",
+    "name": "Heroku cloud server. ( card 4 )",
+    "cardname": "Heroku",
     "email": "ChrisCyb04@bla.org",
     "address": {
       "street": "Hoeger Mall",
@@ -84,7 +84,7 @@
       }
     },
     "phone": "493-170-9623 x156",
-    "website": "kale.biz",
+    "website": "https://www.heroku.com/#",
     "company": {
       "name": "Robel-Corkery",
       "catchPhrase": "Multi-tiered zero tolerance productivity",
@@ -93,8 +93,8 @@
   },
   {
     "id": 5,
-    "name": "Create React App, skill 5",
-    "username": "Kamren",
+    "name": "Create React App. ( card 5 )",
+    "cardname": "CRA",
     "email": "ChrisCyb05@bla.ca",
     "address": {
       "street": "Skiles Walks",
@@ -107,7 +107,7 @@
       }
     },
     "phone": "(254)954-1289",
-    "website": "demarco.info",
+    "website": "https://reactjs.org/docs/create-a-new-react-app.html#create-react-app",
     "company": {
       "name": "Keebler LLC",
       "catchPhrase": "User-centric fault-tolerant solution",
@@ -116,8 +116,8 @@
   },
   {
     "id": 6,
-    "name": "CSS3 advanced, skill 6",
-    "username": "Leopoldo_Corkery",
+    "name": "CSS3 advanced. ( card 6 )",
+    "cardname": "CSS3",
     "email": "ChrisCyb06@bla.info",
     "address": {
       "street": "Norberto Crossing",
@@ -130,7 +130,7 @@
       }
     },
     "phone": "1-477-935-8478 x6430",
-    "website": "ola.org",
+    "website": "https://www.w3schools.com/css/default.asp",
     "company": {
       "name": "Considine-Lockman",
       "catchPhrase": "Synchronised bottom-line interface",
@@ -139,8 +139,8 @@
   },
   {
     "id": 7,
-    "name": "HTML5, ES6+, skill 7",
-    "username": "Elwyn.Skiles",
+    "name": "HTML5, ES6+. ( card 7 )",
+    "cardname": "HTML5",
     "email": "ChrisCyb07@bla.biz",
     "address": {
       "street": "Rex Trail",
@@ -153,7 +153,7 @@
       }
     },
     "phone": "210.067.6132",
-    "website": "elvis.io",
+    "website": "https://www.w3schools.com/html/",
     "company": {
       "name": "Johns Group",
       "catchPhrase": "Configurable multimedia task-force",
@@ -162,8 +162,8 @@
   },
   {
     "id": 8,
-    "name": "JavaScript, Vanilla, skill 8",
-    "username": "Maxime_Nienow",
+    "name": "JavaScript, Vanilla. ( card 8 )",
+    "cardname": "JavaScript",
     "email": "ChrisCyb08@bla.me",
     "address": {
       "street": "Ellsworth Summit",
@@ -176,7 +176,7 @@
       }
     },
     "phone": "586.493.6943 x140",
-    "website": "jacynthe.com",
+    "website": "https://www.w3schools.com/java/default.asp",
     "company": {
       "name": "Abernathy Group",
       "catchPhrase": "Implemented secondary concept",
@@ -185,8 +185,8 @@
   },
   {
     "id": 9,
-    "name": "Firestore, NoSQL DB, skill 9",
-    "username": "Delphine",
+    "name": "Firestore, NoSQL DB. ( card 9 )",
+    "cardname": "Firestore Cloud",
     "email": "ChrisCyb09@bla.io",
     "address": {
       "street": "Dayna Park",
@@ -199,7 +199,7 @@
       }
     },
     "phone": "(775)976-6794 x41206",
-    "website": "conrad.com",
+    "website": "https://firebase.google.com/docs/firestore",
     "company": {
       "name": "Yost and Sons",
       "catchPhrase": "Switchable contextually-based project",
@@ -208,8 +208,8 @@
   },
   {
     "id": 10,
-    "name": "Stripe online CC payments, skill 10",
-    "username": "Moriah.Stanton",
+    "name": "Stripe online CC payments. ( card 10 )",
+    "cardname": "Stripe",
     "email": "ChrisCyb10@bla.biz",
     "address": {
       "street": "Kattie Turnpike",
@@ -222,7 +222,7 @@
       }
     },
     "phone": "024-648-3804",
-    "website": "ambrose.net",
+    "website": "https://stripe.com/en-ee",
     "company": {
       "name": "Hoeger LLC",
       "catchPhrase": "Centralized empowering task-force",
@@ -231,8 +231,8 @@
   },
   {
     "id": 11,
-    "name": "SASS, SCSS, skill 11",
-    "username": "Moriah.Stanton",
+    "name": "SASS, SCSS. ( card 11 )",
+    "cardname": "SASS",
     "email": "ChrisCyb11@bla.biz",
     "address": {
       "street": "Kattie Turnpike",
@@ -245,7 +245,7 @@
       }
     },
     "phone": "024-648-3804",
-    "website": "ambrose.net",
+    "website": "https://www.w3schools.com/sass/default.php",
     "company": {
       "name": "Hoeger LLC",
       "catchPhrase": "Centralized empowering task-force",
@@ -254,8 +254,8 @@
   },
   {
     "id": 12,
-    "name": "Udemy, ZeroToMaster bootcamp, training 12",
-    "username": "Moriah.Stanton",
+    "name": "Udemy, ZeroToMaster bootcamp. ( card 12 )",
+    "cardname": "Udemy",
     "email": "ChrisCyb121@bla.biz",
     "address": {
       "street": "Kattie Turnpike",
@@ -268,7 +268,7 @@
       }
     },
     "phone": "024-648-3804",
-    "website": "ambrose.net",
+    "website": "https://www.udemy.com/",
     "company": {
       "name": "Hoeger LLC",
       "catchPhrase": "Centralized empowering task-force",

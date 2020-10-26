@@ -30,13 +30,12 @@
   );
 }
 
-.card-container strong:first-of-type {
+.card-container > strong:first-of-type{
   font-family: 'Bigelow Rules';
   font-size: 26px;
   font-weight: lighter;
   color:  rgb(62, 216, 82);  
   text-shadow: 3px 6px 8px rgb(13, 11, 119);
-
 }
 
 .card-list-filtered-card strong:first-of-type{
@@ -46,11 +45,26 @@
   transition: all 1s;
 }
 
-.card-container strong:nth-last-of-type(1) {
+.card-container span strong{
+  font-family: 'Bigelow Rules';
+  font-size: 18px;
+  color:  rgb(26, 25, 124);
+  text-shadow: 2px 2px 8px rgb(216, 216, 216); 
+  text-decoration: underline 1px;
+  letter-spacing: .5px;
+}
+.card-container > span{
+  font-size: 15px;
+  color:  rgb(0, 0, 0);
+  text-shadow: 2px 2px 8px rgb(117, 117, 117); 
+  text-decoration: underline 1px;
+}
+
+.card-container > strong:last-of-type{
   font-family: 'Bigelow Rules';
   font-size: 20px;
-  color:  rgb(124, 25, 124);
-  text-shadow: 2px 2px 8px rgb(43, 228, 52); 
+  color:  rgb(26, 25, 124);
+  text-shadow: 2px 2px 8px rgb(216, 216, 216); 
   text-decoration: underline 1px;
 }
 
