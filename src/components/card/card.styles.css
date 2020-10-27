@@ -18,7 +18,6 @@
   cursor: pointer;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
-  transform: translateZ(0);
   transition: transform 0.35s ease-out;
 }
 
@@ -65,7 +64,7 @@
   font-size: 20px;
   color:  rgb(26, 25, 124);
   text-shadow: 2px 2px 8px rgb(216, 216, 216); 
-    text-decoration: underline 1px;
+  text-decoration: underline 1px;
 }
 
 .card-container img {
@@ -78,11 +77,32 @@
     rgb(22, 82, 7) 0%,
     rgb(96, 196, 30) 100%
   );
+  transition: transform 0.35s ease-out;
 }
 
 .card-container img:hover {
-  transform: scale(1.05);
   transition: transform 0.5s ease-out;
+  transform: scale(1.05);
+  transform: translate3d(0px,-3px,0px) scale(1.04);
+  /* cursor: default; */
+  cursor: auto;
+}
+
+.card-container a {
+  color: chartreuse;
+  transition: transform 0.35s ease-out;
+}
+
+.card-container span:first-of-type {
+  transition: transform 0.35s ease-out;
+}
+.card-container span:first-of-type:hover {
+  transition: transform 0.5s ease-out;
+  transform: translate3d(3px,-2px,0px) scale(1.1);
+}
+
+.card-container span:first-of-type:hover a {
+  text-shadow: 2px 2px 1px rgb(202, 45, 34);
 }
 
 /* latin BigeLow */
