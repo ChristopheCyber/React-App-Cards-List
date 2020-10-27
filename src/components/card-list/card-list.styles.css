@@ -16,10 +16,25 @@
 }
 .card-list-filtered-list {
   grid-gap: 10px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom left,
     rgba(7, 27, 82, 1) 0%,
     rgb(93, 241, 105) 100%
-  );
+  ); */
   transition: all 3s;
+}
+#tsparticles {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 140%;
+  opacity: 1;
+  background-image: url('../card/img/img1.jpg') fixed top left;
+  /* background-color: none; */
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  background-size: cover;
 }

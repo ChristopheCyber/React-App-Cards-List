@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import { CardList } from './components/card-list/card-list.component.jsx';
 import { SearchBox } from './components/search-box/search-box.component.jsx';
+//TypeScript tsParticles API :
+import Particles from "react-tsparticles";
 
 class App extends React.Component {
   constructor(props) {
@@ -26,16 +28,16 @@ class App extends React.Component {
     // setState() 
     this.setState({ searchTxt1: evt.target.value },
       () => {
-        console.log("in Event deb searchTxt1=", this.state.searchTxt1," classAnim=", classAnim);
+        console.log("in Event deb searchTxt1=", this.state.searchTxt1, " classAnim=", classAnim);
 
         //  fctClassAnim() placed in callback of setState( ,()=>... )   
         fctClassAnim(this.state.searchTxt1);
 
-        console.log("in Event fin1 classAnim=", classAnim,'; this.state.picContentType=', this.state.picContentType);
+        console.log("in Event fin1 classAnim=", classAnim, '; this.state.picContentType=', this.state.picContentType);
         //
-        this.setState( { picContentType: classAnim },
-          console.log("in Event fin2 classAnim= ", classAnim,'; this.state.picContentType= ', this.state.picContentType,'; constPicContentType= ', constPicContentType)
-          );
+        this.setState({ picContentType: classAnim },
+          console.log("in Event fin2 classAnim= ", classAnim, '; this.state.picContentType= ', this.state.picContentType, '; constPicContentType= ', constPicContentType)
+        );
       });
     // 
     // function fctClassAnim() anime filtered cards */
@@ -100,7 +102,7 @@ class App extends React.Component {
     };
     */
     return (
-      <div className="App img-class">
+      <div className="App img-class" >
         <h1> Cards Selection Board </h1>
         <label>
           <i className="bigLow js-grid">Search in cards titles -&gt;</i>
@@ -122,6 +124,95 @@ class App extends React.Component {
           }
         </CardList> 
           */}
+          {/* tsParticles */}
+          <div id="tsparticles">
+            <Particles 
+              options={{
+                // background: {
+                //   color: {
+                //     value: "#0d47a1",
+                //   },
+                // },
+                fpsLimit: 60,
+                interactivity: {
+                  detectsOn: "window",
+                  events: {
+                    onClick: {
+                      enable: true,
+                      mode: "grab",
+                    },
+                    onHover: {
+                      enable: true,
+                      mode: "push",
+                    },
+                    resize: true,
+                  },
+                  modes: {
+                    bubble: {
+                      distance: 400,
+                      duration: 2,
+                      opacity: 0.8,
+                      size: 40,
+                    },
+                    push: {
+                      quantity: 4,
+                    },
+                    repulse: {
+                      distance: 50,
+                      duration: 0.6,
+                    },
+                  },
+                },
+                particles: {
+                  color: {
+                    value: "#ff0000",
+                    animation: {
+                        enable: true,
+                        speed: 40,
+                        sync: true
+                    }
+                },
+                  links: {
+                    color: "#ffffff",
+                    distance: 150,
+                    enable: true,
+                    opacity: 0,
+                    width: 1,
+                  },
+                  collisions: {
+                    enable: true,
+                  },
+                  move: {
+                    direction: "random",
+                    enable: true,
+                    outMode: "out",
+                    random: true,
+                    speed: 2,
+                    straight: true,
+                  },
+                  number: {
+                    density: {
+                      enable: true,
+                      value_area: 1000,
+                    },
+                    value: 80,
+                  },
+                  opacity: {
+                    value: 0.5,
+                  },
+                  shape: {
+                    type: "circle",
+                  },
+                  size: {
+                    random: true,
+                    value: 7,
+                  },
+                },
+                detectRetina: true,
+              }}
+            />
+            </div>
+            { /* console.log('In Card-list prop1.cardsPropImg=>', prop1.cardsPropImg) */}
       </div>
     );
   }
