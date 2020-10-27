@@ -12,8 +12,8 @@ export const Card = (prop1) => (
         {/* ---my pics--- */}
         <img src={require(`./img/img${prop1.cardProp2.id}.jpg`)}
             alt={`Pic ${prop1.cardProp2.id}`}
-            /* title={`${prop1.cardProp2.cardname} card`} */
-            /* className={`${prop1.cardProp3}`} */
+        /* title={`${prop1.cardProp2.cardname} card`} */
+        /* className={`${prop1.cardProp3}`} */
         />
         <span>
             <a href={prop1.cardProp2.website} target="_blank" rel="noopener noreferrer">
