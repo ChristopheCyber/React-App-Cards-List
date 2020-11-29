@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Group Script card.II:  Test card.II.1; Snapshot testing: 1`] = `
+<div
+  className="card-container img-class-card"
+>
+  <strong>
+     
+    React framework. ( card 1 )
+     
+  </strong>
+  <img
+    alt="Pic 1"
+    src="img1.jpg"
+  />
+  <span>
+    <a
+      href="https://reactjs.org/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <strong>
+        Website Info: 
+      </strong>
+      React
+    </a>
+  </span>
+  <strong>
+     Pic content : 
+  </strong>
+  <span>
+    One of my skills
+    .
+  </span>
+</div>
+`;
