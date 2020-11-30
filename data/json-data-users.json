@@ -254,8 +254,8 @@
   },
   {
     "id": 12,
-    "name": "Udemy, ZeroToMaster bootcamp. ( card 12 )",
-    "cardname": "Udemy, ZTM",
+    "name": "Jest JS testing, with Enzyme in React ( card 12 )",
+    "cardname": "Jest, Tests",
     "email": "ChrisCyb121@bla.biz",
     "address": {
       "street": "Kattie Turnpike",
@@ -268,7 +268,7 @@
       }
     },
     "phone": "024-648-3804",
-    "website": "https://www.udemy.com/",
+    "website": "https://jestjs.io/en/",
     "company": {
       "name": "Hoeger LLC",
       "catchPhrase": "Centralized empowering task-force",
