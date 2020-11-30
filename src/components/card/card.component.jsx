@@ -10,7 +10,9 @@ export const Card = (prop1) => (
             , '=>', prop1.cardProp2.name
             , 'prop1.cardProp3=>', prop1.cardProp3)}
         {/* ---my pics--- */}
-        <img src={require(`./img/img${prop1.cardProp2.id}.jpg`)}
+        {/* WebPack pbm require('pic') => <img src="[object Module]">
+            => put require('pic').DEFAULT as: */}
+        <img src={require(`./img/img${prop1.cardProp2.id}.jpg`).default}
             alt={`Pic ${prop1.cardProp2.id}`}
         /* title={`${prop1.cardProp2.cardname} card`} */
         /* className={`${prop1.cardProp3}`} */
