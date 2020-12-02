@@ -1,9 +1,21 @@
 import React from 'react';
+import { Card } from "./card.component.jsx";
+
 //ENZYME fncts: ( we don't use MOUNT and RENDER here )
 // import { shallow,mount,render } from "enzyme";
 import { shallow } from "enzyme";
 
-import { Card } from "./card.component.jsx";
+//REACT TEST RENDER:
+// import { create } from "react-test-renderer";
+
+/* describe('Group Script card.III: ', () => {
+    it('Test card.III.1; Snapshot testing with create of REACT TEST RENDER:', () => {
+        expect.assertions(1);
+        // testing if create rendering something :
+        expect(create( <Card cardProp2={card_0} cardProp3={"img-class"}/> ).toJSON()).toMatchSnapshot();
+    });
+});
+ */
 
 const card_0 = {
     "id": 1,
@@ -30,18 +42,18 @@ const card_0 = {
   };
 
 console.log("card.test script => card_0 =",card_0);
-describe('Group Script card.I: ', () => {
-    it('Test card.I.1; shallow rendering:', () => {
+describe('Group Script card.test.I: ', () => {
+    it('Test card.test.I.1; shallow rendering:', () => {
         expect.assertions(1);
-        console.log("card.test script => shallow(<Card />) =",shallow( <Card cardProp2={card_0} cardProp3={"img-class"}/> ));
+        console.log("****************** 1 * card.test script => shallow(<Card />) =",shallow( <Card cardProp2={card_0} cardProp3={"img-class"}/> ));
         // testing if shallow rendering something (ie .length = 1) :
         expect(shallow( <Card cardProp2={card_0} cardProp3={"img-class"}/> ).length).toBe(1);
     });
 });
-describe('Group Script card.II: ', () => {
-    it('Test card.II.1; Snapshot testing:', () => {
+describe('Group Script card.test.II: ', () => {
+    it('Test card.test.II.1; Snapshot testing:', () => {
         expect.assertions(1);
-        // testing if shallow rendering something (ie length = 1) :
+        // testing if shallow rendering correctly:
         expect(shallow( <Card cardProp2={card_0} cardProp3={"img-class"}/> )).toMatchSnapshot();
     });
 });

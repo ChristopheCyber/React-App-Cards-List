@@ -3,15 +3,20 @@ import './card.styles.css';
 //import img01 from './img/img01.jpg' // relative path to image 
 
 export const Card = (prop1) => (
-    <div className={'card-container ' + prop1.cardProp3 + '-card'}>
+    <div className={'card-container ' + prop1.cardProp3 + '-card'} >
         {/*<div className='card-container'> */}
         <strong> {prop1.cardProp2.name} </strong>
         { console.log('In Card ', prop1.cardProp2.id
             , '=>', prop1.cardProp2.name
             , 'prop1.cardProp3=>', prop1.cardProp3)}
         {/* ---my pics--- */}
-        {/* WebPack pbm require('pic') => <img src="[object Module]">
-            => put require('pic').DEFAULT as: */}
+        {/* WebPack pbm require('pic') => <img src="[object Module]"/>
+            SOLUTION => put require('pic').DEFAULT as: 
+            <img src={require(`./img/img${prop1.cardProp2.id}.jpg`).default} />
+
+            or => without require(); and with placing directory /img/ in /public (= window.location.origin = http://localhost:3000/):    
+            <img src={window.location.origin + `/img/img${prop1.cardProp2.id}.jpg`} />
+        */}
         <img src={require(`./img/img${prop1.cardProp2.id}.jpg`).default}
             alt={`Pic ${prop1.cardProp2.id}`}
         /* title={`${prop1.cardProp2.cardname} card`} */

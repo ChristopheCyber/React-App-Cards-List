@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Group Script card.II:  Test card.II.1; Snapshot testing: 1`] = `
+exports[`Group Script card.test.II:  Test card.test.II.1; Snapshot testing: 1`] = `
 <div
   className="card-container img-class-card"
 >
@@ -11,7 +11,6 @@ exports[`Group Script card.II:  Test card.II.1; Snapshot testing: 1`] = `
   </strong>
   <img
     alt="Pic 1"
-    src="img1.jpg"
   />
   <span>
     <a
