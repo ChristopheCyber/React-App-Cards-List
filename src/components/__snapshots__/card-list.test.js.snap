@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Group Script card-list.test.I:  Test card-list.test.I.1; Snapshot testing: 1`] = `
+<div
+  className="card-list-divStyle img-class-list"
+>
+  <div
+    id="tsparticles"
+  >
+    <h
+      height="100%"
+      id="tsparticles"
+      options={
+        Object {
+          "detectRetina": true,
+          "fpsLimit": 60,
+          "interactivity": Object {
+            "detectsOn": "window",
+            "events": Object {
+              "onHover": Object {
+                "enable": true,
+                "mode": "trail",
+              },
+              "onclick": Object {
+                "enable": true,
+                "mode": "push",
+              },
+            },
+            "modes": Object {
+              "push": Object {
+                "particles_nb": 34,
+              },
+              "remove": Object {
+                "distance": 10,
+                "duration": 0.2,
+                "particles_nb": 20,
+              },
+              "repulse": Object {
+                "distance": 100,
+                "duration": 0.2,
+              },
+              "trail": Object {
+                "delay": 0.08,
+                "particles": Object {
+                  "collisions": Object {
+                    "enable": true,
+                  },
+                  "color": Object {
+                    "animation": Object {
+                      "enable": true,
+                      "speed": 150,
+                      "sync": true,
+                    },
+                    "value": "#ff0000",
+                  },
+                  "links": Object {
+                    "enable": true,
+                  },
+                  "move": Object {
+                    "outMode": "out",
+                    "speed": 1,
+                  },
+                  "size": Object {
+                    "animation": Object {
+                      "destroy": "max",
+                      "enable": true,
+                      "minimumValue": 1,
+                      "speed": 4,
+                      "startValue": "min",
+                      "sync": true,
+                    },
+                    "value": 5,
+                  },
+                },
+                "quantity": 1.5,
+              },
+            },
+            "resize": true,
+          },
+          "particles": Object {
+            "collisions": Object {
+              "enable": true,
+            },
+            "color": Object {
+              "animation": Object {
+                "enable": true,
+                "speed": 50,
+                "sync": false,
+              },
+              "color": "random",
+              "value": "#f00",
+            },
+            "links": Object {
+              "color": "random",
+              "distance": 150,
+              "enable": true,
+              "opacity": 1,
+              "width": 1,
+            },
+            "move": Object {
+              "direction": "random",
+              "enable": true,
+              "outMode": "bounce",
+              "random": true,
+              "speed": 2,
+              "straight": false,
+            },
+            "number": Object {
+              "density": Object {
+                "enable": true,
+              },
+            },
+            "opacity": Object {
+              "animation": Object {
+                "enable": true,
+                "minimumValue": 0.3,
+                "speed": 0.5,
+              },
+              "random": Object {
+                "enable": true,
+                "minimumValue": 0.3,
+              },
+              "value": 0.8,
+            },
+            "size": Object {
+              "animation": Object {
+                "enable": true,
+                "minimumValue": 1,
+                "speed": 3,
+              },
+              "random": Object {
+                "enable": true,
+                "minimumValue": 1,
+              },
+              "value": 3,
+            },
+          },
+        }
+      }
+      style={Object {}}
+      width="100%"
+    />
+  </div>
+  <Card
+    cardProp2={
+      Object {
+        "address": Object {
+          "city": "Gwenborough",
+          "geo": Object {
+            "lat": "-37.3159",
+            "lng": "81.1496",
+          },
+          "street": "Kulas Light",
+          "suite": "Apt. 556",
+          "zipcode": "92998-3874",
+        },
+        "cardname": "React",
+        "company": Object {
+          "bs": "e-business app web01",
+          "catchPhrase": "Multi-layered client-server neural-net",
+          "name": "Romaguera-Crona",
+        },
+        "email": "ChrisCyb01@bla.biz",
+        "id": 1,
+        "name": "React framework. ( card 1 )",
+        "phone": "1-770-736-8031 x56442",
+        "website": "https://reactjs.org/",
+      }
+    }
+    cardProp3="img-class"
+    key="1"
+  />
+</div>
+`;
