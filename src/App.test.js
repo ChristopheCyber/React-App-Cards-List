@@ -16,23 +16,28 @@ test('/Cards Selection Board/ text', () => {
 
 describe('Group Script App.test.I: ', () => {
   it('Test App.test.I.1; Snapshot testing:', () => {
-      expect.assertions(1);
-      // testing if shallow rendering correctly:
-      expect(shallow( <App /> )).toMatchSnapshot();
+    expect.assertions(1);
+    // testing if shallow rendering correctly:
+    expect(shallow(<App />)).toMatchSnapshot();
   });
 });
 
 describe('Group Script App.test.II: ', () => {
-  it('Test App.test.II.1; State testing:', () => {
-      expect.assertions(1);
-      const wrapper = shallow( <App /> );
-      // testing :
-      /*
-      //.find() and simulate(events) methods comming with ENZYME:
-      wrapper.find('[id="searchBoxId"]').simulate('click');
-      wrapper.find('[id="searchBoxId"]').simulate('change');
-      */
-      expect(wrapper.state('picContentType')).toEqual('img-class');
+  it('Test App.test.II.1; State testing:', async () => {
+    expect.assertions(1);
+    // const wrapper = shallow( <App /> );
+    const fnct1 = async () => {
+      const wrapper = await shallow(<App />);
+      return wrapper
+    }
+    const wrapper = await fnct1();
+    // testing :
+    /*
+    //.find() and simulate(events) methods comming with ENZYME:
+    wrapper.find('[id="searchBoxId"]').simulate('click');
+    wrapper.find('[id="searchBoxId"]').simulate('change');
+    */
+    await expect(wrapper.state('picContentType')).toEqual('img-class');
   });
 });
 
