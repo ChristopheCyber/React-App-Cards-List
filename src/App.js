@@ -109,6 +109,7 @@ class App extends React.Component {
           <i className="bigLow js-grid">Search in cards titles -&gt;</i>
         </label>
         <SearchBox
+          id = "searchBoxId"
           propPlaceHolder="Type text for Searching"
           handleChangeFct={this.methodHandleChange}
         />

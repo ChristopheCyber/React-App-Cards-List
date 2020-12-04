@@ -17,7 +17,7 @@ import { shallow } from "enzyme";
 });
  */
 
-const card_0 = {
+const mockCard_0 = {
     "id": 1,
     "name": "React framework. ( card 1 )",
     "cardname": "React",
@@ -41,19 +41,19 @@ const card_0 = {
     }
   };
 
-console.log("card.test script => card_0 =",card_0);
+console.log("card.test script => mockCard_0 =",mockCard_0);
 describe('Group Script card.test.I: ', () => {
     it('Test card.test.I.1; shallow rendering:', () => {
         expect.assertions(1);
-        console.log("****************** 1 * card.test script => shallow(<Card />) =",shallow( <Card cardProp2={card_0} cardProp3={"img-class"}/> ));
+        console.log("****************** 1 * card.test script => shallow(<Card />) =",shallow( <Card cardProp2={mockCard_0} cardProp3={"img-class"}/> ));
         // testing if shallow rendering something (ie .length = 1) :
-        expect(shallow( <Card cardProp2={card_0} cardProp3={"img-class"}/> ).length).toBe(1);
+        expect(shallow( <Card cardProp2={mockCard_0} cardProp3={"img-class"}/> ).length).toBe(1);
     });
 });
 describe('Group Script card.test.II: ', () => {
     it('Test card.test.II.1; Snapshot testing:', () => {
         expect.assertions(1);
         // testing if shallow rendering correctly:
-        expect(shallow( <Card cardProp2={card_0} cardProp3={"img-class"}/> )).toMatchSnapshot();
+        expect(shallow( <Card cardProp2={mockCard_0} cardProp3={"img-class"}/> )).toMatchSnapshot();
     });
 });

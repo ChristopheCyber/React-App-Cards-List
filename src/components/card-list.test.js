@@ -4,7 +4,7 @@ import { CardList } from "./card-list/card-list.component.jsx";
 //ENZYME fncts: ( we don't use MOUNT and RENDER here )
 import { shallow } from "enzyme";
 
-const arrayCard_0 = [{
+const mockArrayCard_0 = [{
     "id": 1,
     "name": "React framework. ( card 1 )",
     "cardname": "React",
@@ -32,6 +32,6 @@ const arrayCard_0 = [{
     it('Test card-list.test.I.1; Snapshot testing:', () => {
         expect.assertions(1);
         // testing if shallow rendering correctly:
-        expect(shallow( <CardList cardsProp1={arrayCard_0} cardsPropImg={"img-class"}/> )).toMatchSnapshot();
+        expect(shallow( <CardList cardsProp1={mockArrayCard_0} cardsPropImg={"img-class"}/> )).toMatchSnapshot();
     });
 });

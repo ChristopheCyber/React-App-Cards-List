@@ -16,6 +16,7 @@ exports[`Group Script App.test.I:  Test App.test.I.1; Snapshot testing: 1`] = `
   </label>
   <SearchBox
     handleChangeFct={[Function]}
+    id="searchBoxId"
     propPlaceHolder="Type text for Searching"
   />
   <label>
