@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardList } from "./card-list/card-list.component.jsx";
+import { CardList } from "./card-list.component.jsx";
 
 //ENZYME fncts: ( we don't use MOUNT and RENDER here )
 import { shallow } from "enzyme";

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from "./card/card.component.jsx";
+import { Card } from "./card.component.jsx";
 
 //ENZYME fncts: ( we don't use MOUNT and RENDER here )
 // import { shallow,mount,render } from "enzyme";

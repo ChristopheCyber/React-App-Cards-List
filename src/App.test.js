@@ -23,21 +23,16 @@ describe('Group Script App.test.I: ', () => {
 });
 
 describe('Group Script App.test.II: ', () => {
-  it('Test App.test.II.1; State testing:', async () => {
+  it('Test App.test.II.1; State testing:', () => {
     expect.assertions(1);
-    // const wrapper = shallow( <App /> );
-    const fnct1 = async () => {
-      const wrapper = await shallow(<App />);
-      return wrapper
-    }
-    const wrapper = await fnct1();
+    const wrapper = shallow( <App /> );
     // testing :
     /*
     //.find() and simulate(events) methods comming with ENZYME:
     wrapper.find('[id="searchBoxId"]').simulate('click');
     wrapper.find('[id="searchBoxId"]').simulate('change');
     */
-    await expect(wrapper.state('picContentType')).toEqual('img-class');
+    expect(wrapper.state('picContentType')).toEqual('img-class');
   });
 });
 
