@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Group Script search-box.test.I:  Test search-box.test.I.1; Snapshot testing: 1`] = `
+<input
+  className="search-box"
+  id="searchBoxId"
+  name="search1"
+  onChange={[MockFunction]}
+  placeholder="Type text for Searching"
+  type="search"
+/>
+`;
