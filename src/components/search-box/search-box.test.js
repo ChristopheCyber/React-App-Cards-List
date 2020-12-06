@@ -19,27 +19,28 @@ describe('Group Script search-box.test.I: ', () => {
     });
 });
 describe('Group Script search-box.test.II: ', () => {
-    it('Test search-box.test.II.1; testing Event onChange in <input/> button:', async () => {
+    it('Test search-box.test.II.1; testing Event onChange in <input/> button:', () => {
         //mocking methodHandleChange fn :
         const mockMethodHandleChange = jest.fn().mockReturnValue(null);
-        expect.assertions(1);
+        expect.assertions(5);
         const wrapper = shallow(<SearchBox propPlaceHolder="Type text for Searching" handleChangeFct={mockMethodHandleChange} />);
         // testing :
-        //.find() and simulate(events) methods comming with ENZYME:
+        //.find() and simulate(click or change or keypress.. events) methods comming with ENZYME:
         wrapper.find('[id="searchBoxId"]').simulate('change');
-        await expect(mockMethodHandleChange.mock.calls.length).toBe(1);
+        expect(mockMethodHandleChange).toBeCalled();
+        expect(mockMethodHandleChange.mock.calls.length).toBe(1);
+        wrapper.find('[id="searchBoxId"]').simulate('change');
+        expect(mockMethodHandleChange.mock.calls.length).toBe(2);
+        /*
+        const input = wrapper.find('input');
+        input.simulate('change', { target: { value: 'abcdefg'} });
+        input.simulate('keydown', { keyCode: 13 });
+        input.simulate('keydown', { key: 'Enter' });
+        wrapper.find('#id1').simulate('keyDown', {key: 'ArrowRight'});
+        */
+       // directly invoking props :
+        expect(wrapper.find('input').props().id).toEqual('searchBoxId'); 
+        expect(wrapper.find('input').prop('id')).toEqual('searchBoxId'); 
     });
 });
-/*
-describe('Group Script search-box.test.II: ', () => {
-  it('Test search-box.test.II.1; State testing:', () => {
-    expect.assertions(1);
-    const wrapper = shallow( <SearchBox propPlaceHolder="Type text for Searching"  mockMethodHandleChange /> );
-    // testing :
-    //.find() and simulate(events) methods comming with ENZYME:
-    // wrapper.find('[id="searchBoxId"]').simulate('click');
-    // wrapper.find('[id="searchBoxId"]').simulate('change');
-    expect(wrapper.state('picContentType')).toEqual('img-class');
-  });
-*/
 
