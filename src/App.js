@@ -5,6 +5,12 @@ import { SearchBox } from './components/search-box/search-box.component.jsx';
 //TypeScript tsParticles API :
 import Particles from "react-tsparticles";
 import { jspConfig1 } from "./jsParticles/particles-configs";
+// for Redux use :
+import { connect } from 'react-redux';
+// import { setCurrentUser } from './redux/user/user-actions';
+import { setSearchBox } from './redux/search-box/search-box-actions';
+//
+
 
 class App extends React.Component {
   constructor(props) {
