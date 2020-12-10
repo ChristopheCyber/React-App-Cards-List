@@ -1,6 +1,7 @@
 import React from 'react';
 import './card-list.styles.css';
-import { Card } from '../card/card.component.jsx';
+// import { Card } from '../card/card.component.jsx';
+import Card from '../card/card.component.jsx';
 //TypeScript tsParticles API :
 import Particles from "react-tsparticles";
 import { jspConfig2 } from "../../jsParticles/particles-configs.js";

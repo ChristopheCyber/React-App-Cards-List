@@ -2,13 +2,19 @@ import React from 'react';
 import './card.styles.css';
 //import img01 from './img/img01.jpg' // relative path to image 
 
-export const Card = (prop1) => (
-    <div className={'card-container ' + prop1.cardProp3 + '-card'} >
+// for REDUX use
+import { connect } from 'react-redux';
+//for REDUX / Selectors
+// import { selectCurrentUser } from '../../redux/user/user.selectors.js';
+
+//Redux exporting: export const Card = (prop1) => (
+const Card = ( prop1 , cardType ) => (
+    <div className={'card-container ' + cardType + '-card'} >
         {/*<div className='card-container'> */}
         <strong> {prop1.cardProp2.name} </strong>
         { console.log('In Card ', prop1.cardProp2.id
             , '=>', prop1.cardProp2.name
-            , 'prop1.cardProp3=>', prop1.cardProp3)}
+            , 'cardType=>', cardType)}
         {/* ---my pics--- */}
         {/* WebPack pbm require('pic') => <img src="[object Module]"/>
             SOLUTION => put require('pic').DEFAULT as: 
@@ -20,7 +26,7 @@ export const Card = (prop1) => (
         <img src={require(`./img/img${prop1.cardProp2.id}.jpg`).default}
             alt={`Pic ${prop1.cardProp2.id}`}
         /* title={`${prop1.cardProp2.cardname} card`} */
-        /* className={`${prop1.cardProp3}`} */
+        /* className={`${cardType}`} */
         />
         <span>
             <a href={prop1.cardProp2.website} target="_blank" rel="noopener noreferrer">
@@ -29,7 +35,7 @@ export const Card = (prop1) => (
         </span>
         <strong> Pic content : </strong>
         <span>
-            One of my skills{prop1.cardProp3 === "img-class" ? "." : " (filtered)"}
+            One of my skills{cardType === "img-class" ? "." : " (filtered)"}
         </span>
         {/* 
         {/*---origin pics---
@@ -44,3 +50,11 @@ export const Card = (prop1) => (
         */}
     </div>
 );
+
+//REDUCER simple calling 
+const mapStateToProps = (state) => ({
+    cardType: state.keyCardType.cardType
+  }); 
+//connecting component to Redux:
+export default connect(mapStateToProps)(Card);
+  

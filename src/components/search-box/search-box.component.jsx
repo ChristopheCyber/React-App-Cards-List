@@ -1,8 +1,9 @@
 import React from 'react';
-
 import './search-box.styles.css';
+
 /*destructuring object-prop entered*/
 export const SearchBox = ({ propPlaceHolder, handleChangeFct }) => (
+  
   <input id="searchBoxId"
     className='search-box'
     type='search'
@@ -23,3 +24,5 @@ export const SearchBox = (prop1) => (
     onChange={prop1.handleChangeFct}
   />
 );*/
+
+

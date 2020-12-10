@@ -8,7 +8,7 @@ import { jspConfig1 } from "./jsParticles/particles-configs";
 // for Redux use :
 import { connect } from 'react-redux';
 // import { setCurrentUser } from './redux/user/user-actions';
-import { setSearchBox } from './redux/search-box/search-box-actions';
+import { setCardType } from './redux/card/card-actions';
 //
 
 
@@ -30,6 +30,7 @@ class App extends React.Component {
       .then(users1 => this.setState({ cards: users1 }))
   }
   //*** method perso created as an Arrow Function
+  
   methodHandleChange = (evt) => { // (evt) =>{this.setState ( {searchTxt1:evt.target.value} )
     console.log("Change Event !!!");
     // setState() 
@@ -51,6 +52,9 @@ class App extends React.Component {
     var classAnim = "img-class";
     const tabCards = this.state.cards;
     const constPicContentType = this.state.picContentType;
+    //Redux:
+    this.props.fctSetCardType(constPicContentType);
+
     function fctClassAnim(eltSearch) {
       console.log('in fctClassAnim()=> eltSearch=', eltSearch);
       /*constSearchTxt1 = this.state.searchTxt1;*/
@@ -114,6 +118,7 @@ class App extends React.Component {
         <label>
           <i className="bigLow js-grid">Search in cards titles -&gt;</i>
         </label>
+        {console.log("this.fctSetSearchBox =",this.fctSetSearchBox)}
         <SearchBox
           id = "searchBoxId"
           propPlaceHolder="Type text for Searching"
@@ -143,4 +148,14 @@ class App extends React.Component {
     );
   }
 }
-export default App;
+// export default App;
+
+const mapDispatchToProps = dispatch => ({
+  //defining the fct 
+  fctSetCardType: (type) => dispatch(setCardType(type))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(App);
