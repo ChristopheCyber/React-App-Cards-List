@@ -88,8 +88,8 @@ class App extends React.Component {
     const { cards: tabCards, searchTxt1: constSearchTxt1, picContentType: constPicContentType } = this.state;
     const filteredCards = tabCards.filter(eltTab =>
       eltTab.name.toLowerCase().includes(constSearchTxt1.toLowerCase()));
-    console.log('const filteredCards.length=',
-      filteredCards.length);
+    // console.log('const filteredCards.length=',
+    //   filteredCards.length);
     //               
     //counting filtered cards + according text
     var nbrCards;
@@ -118,7 +118,7 @@ class App extends React.Component {
         <label>
           <i className="bigLow js-grid">Search in cards titles -&gt;</i>
         </label>
-        {console.log("this.fctSetSearchBox =",this.fctSetSearchBox)}
+        {/* console.log("this.fctSetSearchBox =",this.fctSetSearchBox) */}
         <SearchBox
           id = "searchBoxId"
           propPlaceHolder="Type text for Searching"

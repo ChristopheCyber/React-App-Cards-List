@@ -17,8 +17,9 @@ export const CardList = (prop1) => (
         { /* console.log('In Card-list prop1.cardsPropImg=>', prop1.cardsPropImg) */}
         { prop1.cardsProp1.map(
             cardElt => (
-                <Card key={cardElt.id} cardProp2={cardElt}
-                    cardProp3={prop1.cardsPropImg} />
+                <Card key={cardElt.id} propAllFields={cardElt}
+                />
+                // propImg={prop1.cardsPropImg} />
             )
         )}
     </div>
