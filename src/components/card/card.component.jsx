@@ -26,8 +26,8 @@ const Card = ( {propAllFields} , cardType ) => (
         */}
         <img src={require(`./img/img${propAllFields.id}.jpg`).default}
             alt={`Pic ${propAllFields.id}`}
-        /* title={`${propAllFields.cardname} card`} */
-        /* className={`${cardType}`} */
+        /* title={`${propAllFields.cardname} card`} 
+           className={`${cardType}`} */
         />
         <span>
             <a href={propAllFields.website} target="_blank" rel="noopener noreferrer">
