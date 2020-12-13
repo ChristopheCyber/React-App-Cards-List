@@ -141,8 +141,9 @@ exports[`Group Script card-list.test.I:  Test card-list.test.I.1; Snapshot testi
       width="100%"
     />
   </div>
-  <Card
-    cardProp2={
+  <Connect(Card)
+    key="1"
+    propAllFields={
       Object {
         "address": Object {
           "city": "Gwenborough",
@@ -167,8 +168,6 @@ exports[`Group Script card-list.test.I:  Test card-list.test.I.1; Snapshot testi
         "website": "https://reactjs.org/",
       }
     }
-    cardProp3="img-class"
-    key="1"
   />
 </div>
 `;

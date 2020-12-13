@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 // import { selectCurrentUser } from '../../redux/user/user.selectors.js';
 
 //Redux exporting: export const Card = (prop1) => (
-const Card = ( {propAllFields} , cardType ) => (
+export const Card = ( {propAllFields} , cardType ) => (
     <div className={'card-container ' + cardType + '-card'} >
         {/*<div className='card-container'> */}
         <strong> {propAllFields.name} </strong>

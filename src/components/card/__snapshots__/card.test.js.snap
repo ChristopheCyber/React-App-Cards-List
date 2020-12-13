@@ -2,7 +2,7 @@
 
 exports[`Group Script card.test.II:  Test card.test.II.1; Snapshot testing: 1`] = `
 <div
-  className="card-container img-class-card"
+  className="card-container [object Object]-card"
 >
   <strong>
      
@@ -29,7 +29,7 @@ exports[`Group Script card.test.II:  Test card.test.II.1; Snapshot testing: 1`] 
   </strong>
   <span>
     One of my skills
-    .
+     (filtered)
   </span>
 </div>
 `;

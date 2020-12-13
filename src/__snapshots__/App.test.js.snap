@@ -1,125 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Group Script App.test.I:  Test App.test.I.1; Snapshot testing: 1`] = `
-<div
-  className="App img-class"
->
-  <h1>
-     Cards Selection Board 
-  </h1>
-  <label>
-    <i
-      className="bigLow js-grid"
-    >
-      Search in cards titles -&gt;
-    </i>
-  </label>
-  <SearchBox
-    handleChangeFct={[Function]}
-    id="searchBoxId"
-    propPlaceHolder="Type text for Searching"
-  />
-  <label>
-    <i
-      className="bigLow bigLow-search"
-    >
-        
-       ( 0 card in list now ) 
-    </i>
-  </label>
-  <CardList
-    cardsProp1={Array []}
-    cardsPropImg="img-class"
-  />
-  <div
-    id="tsparticles"
-  >
-    <h
-      height="100%"
-      id="tsparticles"
-      options={
-        Object {
-          "detectRetina": true,
-          "fpsLimit": 60,
-          "interactivity": Object {
-            "detectsOn": "window",
-            "events": Object {
-              "onClick": Object {
-                "enable": true,
-                "mode": "grab",
-              },
-              "onHover": Object {
-                "enable": true,
-                "mode": "push",
-              },
-              "resize": true,
-            },
-            "modes": Object {
-              "bubble": Object {
-                "distance": 400,
-                "duration": 2,
-                "opacity": 0.8,
-                "size": 40,
-              },
-              "push": Object {
-                "quantity": 4,
-              },
-              "repulse": Object {
-                "distance": 50,
-                "duration": 0.6,
-              },
-            },
-          },
-          "particles": Object {
-            "collisions": Object {
-              "enable": true,
-            },
-            "color": Object {
-              "animation": Object {
-                "enable": true,
-                "speed": 40,
-                "sync": true,
-              },
-              "value": "#ff0000",
-            },
-            "links": Object {
-              "color": "#ffffff",
-              "distance": 150,
-              "enable": true,
-              "opacity": 0,
-              "width": 1,
-            },
-            "move": Object {
-              "direction": "random",
-              "enable": true,
-              "outMode": "out",
-              "random": true,
-              "speed": 2,
-              "straight": true,
-            },
-            "number": Object {
-              "density": Object {
-                "enable": true,
-                "value_area": 1000,
-              },
-              "value": 80,
-            },
-            "opacity": Object {
-              "value": 0.5,
-            },
-            "shape": Object {
-              "type": "circle",
-            },
-            "size": Object {
-              "random": true,
-              "value": 7,
-            },
-          },
-        }
-      }
-      style={Object {}}
-      width="100%"
-    />
-  </div>
-</div>
+<App
+  fctSetCardType={[Function]}
+  store={
+    Object {
+      "cards": Array [],
+      "dispatch": [Function],
+      "getState": [Function],
+      "observable": [Function],
+      "picContentType": "img-class",
+      "replaceReducer": [Function],
+      "searchTxt1": "",
+      "suscribe": [Function],
+    }
+  }
+/>
 `;

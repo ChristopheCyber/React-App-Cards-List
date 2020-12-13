@@ -12,7 +12,7 @@ import { setCardType } from './redux/card/card-actions';
 //
 
 
-class App extends React.Component {
+export class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
