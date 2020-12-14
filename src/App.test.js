@@ -29,8 +29,9 @@ const mockStore = {
 describe('Group Script App.test.I: ', () => {
   it('Test App.test.I.1; Snapshot testing:', () => {
     expect.assertions(1);
+    const wrapper = shallow( <App store={mockStore}/> );
     // testing if shallow rendering correctly:
-    expect(shallow(<App store={mockStore}/>)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 
