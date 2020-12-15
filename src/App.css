@@ -7,44 +7,9 @@
   text-decoration-thickness: 2px;
   color: #4bccdd;
 }
-h1 {
-  font-family: "Bigelow Rules";
-  font-size: 30px;
-  /*text-shadow: 2px 8px 6px #06047a;*/
-  text-shadow: 2px 4px 3px #44d6fa;
-  font-style: lighter;
-  font-weight: 300;
-  color: rgb(120, 245, 37);
-  margin: 10px 20px 0 20px;
-  padding-bottom: 0px;
-}
 .bigLow-search-filtered {
   color: rgb(120, 245, 37);
 }
-
-.App {
-  text-align: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-/* Animation with JS */
-.container-grid-animate {
-  /*grid-template-columns: 250px 250px 250px;
-  grid-template-rows: 250px;*/
-  color: rgb(203, 206, 55);
-  text-shadow: 2px 2px 1px rgb(231, 57, 57);
-  /*display: grid;
-  /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
-  /*grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  grid-gap: 5px;
-  transition: all 3s;
-  img:hover {
-    transform: scale(1.05);
-    transition: transform 0.5s ease-out;
-  }*/
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;

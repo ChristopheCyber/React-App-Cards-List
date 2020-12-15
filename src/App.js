@@ -1,17 +1,10 @@
 import React from 'react';
 import './App.css';
-import { CardList } from './components/card-list/card-list.component.jsx';
-import { SearchBox } from './components/search-box/search-box.component.jsx';
-//TypeScript tsParticles API :
-import Particles from "react-tsparticles";
-import { jspConfig1 } from "./jsParticles/particles-configs";
+import { MainPage } from './containerPages/MainPage/mainpage.component.jsx';
 // for Redux use :
 import { connect } from 'react-redux';
-// import { setCurrentUser } from './redux/user/user-actions';
 import { setCardType } from './redux/card/card-actions';
 //
-
-
 export class App extends React.Component {
   constructor(props) {
     super(props);
@@ -30,21 +23,20 @@ export class App extends React.Component {
       .then(users1 => this.setState({ cards: users1 }))
   }
   //*** method perso created as an Arrow Function
-  
   methodHandleChange = (evt) => { // (evt) =>{this.setState ( {searchTxt1:evt.target.value} )
     console.log("Change Event !!!");
     // setState() 
     this.setState({ searchTxt1: evt.target.value },
       () => {
-        console.log("in Event deb searchTxt1=", this.state.searchTxt1, " classAnim=", classAnim);
+        // console.log("in Event deb searchTxt1=", this.state.searchTxt1, " classAnim=", classAnim);
 
         //  fctClassAnim() placed in callback of setState( ,()=>... )   
         fctClassAnim(this.state.searchTxt1);
 
-        console.log("in Event fin1 classAnim=", classAnim, '; this.state.picContentType=', this.state.picContentType);
+        // console.log("in Event fin1 classAnim=", classAnim, '; this.state.picContentType=', this.state.picContentType);
         //
         this.setState({ picContentType: classAnim },
-          console.log("in Event fin2 classAnim= ", classAnim, '; this.state.picContentType= ', this.state.picContentType, '; constPicContentType= ', constPicContentType)
+          // console.log("in Event fin2 classAnim= ", classAnim, '; this.state.picContentType= ', this.state.picContentType, '; constPicContentType= ', constPicContentType)
         );
       });
     // 
@@ -62,14 +54,8 @@ export class App extends React.Component {
         eltTab.name.toLowerCase().includes(eltSearch.toLowerCase()));
       console.log('in fctClassAnim()=> filteredCards2.length=',
         filteredCards2.length);
-      /*document.querySelector('.img-class').classList.toggle('img-class-filtered');*/
       if (filteredCards2.length < tabCards.length) {
         classAnim = "card-list-filtered";
-        /*document.getElementsByTagName('img')[0].style.height='100px';
-            this.state.cards.map( cardElt => 
-              <h1 key={cardElt.id}> {cardElt.name} </h1> )
-          document.querySelectorAll('.img-class')[0].classList.toggle('img-class-filtered');
-        */
       }
       else {
         classAnim = "img-class";
@@ -83,67 +69,9 @@ export class App extends React.Component {
   }
   //*** Life Cycle method render() {}
   render() {
-    /*destructuring object state, doing same as:*/
-    /* const tabCards = this.state.cards; const constSearchTxt1 = this.state.searchTxt1; */
-    const { cards: tabCards, searchTxt1: constSearchTxt1, picContentType: constPicContentType } = this.state;
-    const filteredCards = tabCards.filter(eltTab =>
-      eltTab.name.toLowerCase().includes(constSearchTxt1.toLowerCase()));
-    // console.log('const filteredCards.length=',
-    //   filteredCards.length);
-    //               
-    //counting filtered cards + according text
-    var nbrCards;
-    if (filteredCards.length > 1) {
-      nbrCards = " ( " + filteredCards.length + " cards in list now ) ";
-    }
-    else {
-      nbrCards = " ( " + filteredCards.length + " card in list now ) ";
-    }
-    //coloring text number filtered cards 
-    var filterBigLowNumber = "bigLow-search";
-    if (filteredCards.length < tabCards.length) {
-      filterBigLowNumber = "bigLow-search-filtered";
-    }
-    /*
-    function fctEv(event1){
-      console.log("fctEv starts with:",event1);
-      fctTestv();
-      document.querySelector('.js-grid').classList.toggle('container-grid-animate');
-      document.querySelector('.img-class').classList.toggle('card-list-filtered');
-    };
-    */
     return (
-      <div className="App img-class" >
-        <h1> Cards Selection Board </h1>
-        <label>
-          <i className="bigLow js-grid">Search in cards titles -&gt;</i>
-        </label>
-        {/* console.log("this.fctSetSearchBox =",this.fctSetSearchBox) */}
-        <SearchBox
-          id = "searchBoxId"
-          propPlaceHolder="Type text for Searching"
-          handleChangeFct={this.methodHandleChange}
-        />
-        <label>
-          <i className={"bigLow " + filterBigLowNumber}>&nbsp; {nbrCards}</i>
-        </label>
-        {/*<CardList cardsProp1={this.state.cards} />*/}
-        <CardList cardsProp1={filteredCards} cardsPropImg={constPicContentType} />
-        {/*1 children of CardList component 
-          <h2>CardList children here </h2>
-          {
-            this.state.cards.map( cardElt => 
-              <h1 key={cardElt.id}> {cardElt.name} </h1> )
-          }
-        </CardList> 
-          */}
-        {/* tsParticles */}
-        <div id="tsparticles">
-          <Particles
-            options={jspConfig1}
-          />
-        </div>
-        { /* console.log('In Card-list prop1.cardsPropImg=>', prop1.cardsPropImg) */}
+      <div>
+        <MainPage tabCards={this.state.cards} constSearchTxt1={this.state.searchTxt1} constPicContentType={this.state.picContentType} methodHandleChange={this.methodHandleChange}/>
       </div>
     );
   }
