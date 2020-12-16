@@ -7,6 +7,7 @@
       "enzyme-to-json/serializer"
     ]
   },
+  "homepage": "https://github.com/ChristopheCyber/React-App-Cards-List.git",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -22,6 +23,8 @@
     "redux-logger": "^3.0.6"
   },
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "clear && react-scripts test --runInBand --watchAll --verbose",
