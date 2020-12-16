@@ -7,7 +7,7 @@
       "enzyme-to-json/serializer"
     ]
   },
-  "homepage": "https://github.com/ChristopheCyber/React-App-Cards-List.git",
+  "homepage": "https://ChristopheCyber.github.io/React-App-Cards-List",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
