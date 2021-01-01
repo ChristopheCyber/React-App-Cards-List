@@ -1,3 +1,7 @@
+/*
+// for updating GitHub page: key homepage to place in package.json :
+  "homepage": "https://ChristopheCyber.github.io/React-App-Cards-List",
+*/
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
